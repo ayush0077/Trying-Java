@@ -1,0 +1,90 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Map View -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rotationX="0" />
+
+    <!-- Bottom Controls -->
+    <LinearLayout
+        android:id="@+id/bottomControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true">
+
+        <!-- Spinner for Transport Mode -->
+        <Spinner
+            android:id="@+id/modeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:prompt="@string/choose_mode" />
+
+
+        <!-- Pickup Location -->
+        <AutoCompleteTextView
+            android:id="@+id/pickupLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Pickup Location"
+            android:background="@drawable/input_background"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Drop-off Location -->
+        <AutoCompleteTextView
+            android:id="@+id/dropOffLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Drop-off Location"
+            android:background="@drawable/input_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Total Fare -->
+        <TextView
+            android:id="@+id/fareTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="@drawable/fare_background"
+            android:text="Total Fare: NPR 0.0"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Distance -->
+        <TextView
+            android:id="@+id/distanceTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Distance: 0 km"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Find Driver Button -->
+        <Button
+            android:id="@+id/requestRideButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_500"
+            android:text="Find Driver"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:padding="12dp" />
+    </LinearLayout>
+
+</RelativeLayout>

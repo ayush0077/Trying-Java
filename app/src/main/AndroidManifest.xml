@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ExtraText">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RideSharing"
+        android:usesCleartextTraffic="true">
+
+        <!-- SplashActivity: This is the first screen the user sees -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- API Key for Google or Map services -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY_HERE" />
+
+        <!-- WelcomeActivity: (Optional) -->
+        <!-- Uncomment this if needed -->
+        <!--
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="true">
+        </activity>
+        -->
+
+        <!-- MainActivity: The main activity after logging in -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- LoginActivity: Screen for user login -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- RegisterActivity: Screen for user registration -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- LoginRegisterActivity: Screen for login and registration options -->
+        <activity
+            android:name=".LoginRegisterActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- HomeActivity: Dashboard or home screen -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- DriverActivity: Driver's dashboard -->
+        <activity
+            android:name=".DriverActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- RiderActivity: Rider's dashboard -->
+        <activity
+            android:name=".RiderActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- MapActivity: Map for route and location -->
+        <activity
+            android:name=".MapActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- RideDetailsActivity: Details of a specific ride -->
+        <activity
+            android:name=".RideDetailsActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- DriverRideActivity: Displays ride details for the driver -->
+        <activity
+            android:name=".DriverRideActivity"
+            android:exported="true">
+        </activity>
+
+    </application>
+</manifest>

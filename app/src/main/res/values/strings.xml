@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">RideSharing</string>
+    <string-array name="role_options">
+        <item>Rider</item>
+        <item>Driver</item>
+    </string-array>
+    <string name="choose_mode">Choose Mode</string>
+    <string-array name="mode_array">
+        <item>Walking</item>
+        <item>Car</item>
+        <item>Bike</item>
+    </string-array>
+</resources>
